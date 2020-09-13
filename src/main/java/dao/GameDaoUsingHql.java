@@ -19,6 +19,7 @@ public class GameDaoUsingHql
         Session session=GetSessionObject.getSessionObject().openSession();
         String hql="from GameDto";
         Query query= session.createQuery(hql);
+        query.setCacheable(true);
         List<GameDto> list=query.list();
         return list;
     }
@@ -27,6 +28,7 @@ public class GameDaoUsingHql
         Session session=GetSessionObject.getSessionObject().openSession();
         String hql="from GameDto where id=:id";
         Query query=session.createQuery(hql);
+        query.setCacheable(true);
         query.setParameter("id",id);
         GameDto gameDto=(GameDto) query.uniqueResult();
         return gameDto;

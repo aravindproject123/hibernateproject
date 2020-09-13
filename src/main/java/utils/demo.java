@@ -46,10 +46,16 @@ public class demo
 //        GameDaoUsingHql gameDaoUsingHql=new GameDaoUsingHql();
 //        gameDaoUsingHql.deleteGameDatabyId(4);
 
-        //cache testing
-        GameDaoUsingHql gameDaoUsingHql=new GameDaoUsingHql();
-        System.out.println( gameDaoUsingHql.getGameDatabyId(2));
-        System.out.println(gameDaoUsingHql.getGameDatabyId(3));
+       //cache testing for inbuiltfunction
+        GameDaoUsingInbuiltFun gameDaoUsingInbuiltFun=new GameDaoUsingInbuiltFun();
+        System.out.println(gameDaoUsingInbuiltFun.getGameDatabyId(2));
+        System.out.println(gameDaoUsingInbuiltFun.getGameDatabyId(2));
+
+
+        //cache testing for hql
+//        GameDaoUsingHql gameDaoUsingHql=new GameDaoUsingHql();
+//        System.out.println( gameDaoUsingHql.getGameDatabyId(2));
+//        System.out.println(gameDaoUsingHql.getGameDatabyId(2));
 
 
     }

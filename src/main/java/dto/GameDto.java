@@ -10,8 +10,8 @@ import org.hibernate.annotations.GenericGenerator;
 
 @Entity
 @Table(name = "Game_Detail")
-//@Cacheable
-//@Cache(usage = CacheConcurrencyStrategy.READ_ONLY)
+@Cacheable
+@Cache(usage = CacheConcurrencyStrategy.READ_ONLY)
 public class GameDto implements Serializable
 {
 	@Id
